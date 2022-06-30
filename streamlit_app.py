@@ -1,7 +1,7 @@
 import streamlit
 import pandas
 import requests
-import snowflake.connector
+
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 # disply the api
 streamlit.text(fruityvice_response)
