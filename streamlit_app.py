@@ -40,7 +40,6 @@ streamlit.header("Fruityvice Fruit Advice!")
 #streamlit.header("Fruityvice Fruit Advice!")
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?')
- 
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit"+ fruit_choice)
     fruityvice_normalized =pands.json_normalize(fruityvice_response.json())
     streamlit.dataframe(fruityvice_normalized)
